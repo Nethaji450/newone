@@ -8,7 +8,7 @@ node {
        stage('BuildArtifact'){
 
          // sh 'mvn install'
-	       tool name: 'mvn-master', type: 'maven'
+	       //tool name: 'mvn-master', type: 'maven'
 
 	       sh 'mvn clean install'
        }
