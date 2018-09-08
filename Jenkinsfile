@@ -9,7 +9,7 @@ node {
 
          // sh 'mvn install'
 	       
-	       sh 'mvn clean'
+	       sh 'mvn clean install'
        }
 	   
       stage('Sonar') {
