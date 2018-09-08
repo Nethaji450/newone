@@ -8,9 +8,9 @@ node {
        stage('BuildArtifact'){
 
          // sh 'mvn install'
-	       tool name: 'mvn-master', type: 'maven'
-
-	       sh 'mvn clean install'
+	      def mvnhome = tool name: 'mvn-master', type: 'maven'
+	       def mvnCMD = "${mvnhome}/bin/mvn"
+	       sh "${mvnCMD} clean install"
        }
 	   
       stage('Sonar') {
